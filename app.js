@@ -38,17 +38,15 @@ function sortearAmigo() {
     return;
   }
 
-  const sorteio = [...participantes];
-  sorteio.sort(() => Math.random() - 0.5);
+  const sorteado =
+    participantes[Math.floor(Math.random() * participantes.length)];
 
   const resultado = document.getElementById("resultado");
   resultado.innerHTML = "";
 
-  for (let i = 0; i < participantes.length; i++) {
-    const li = document.createElement("li");
-    li.textContent = `${participantes[i]} tirou ${sorteio[i]}`;
-    resultado.appendChild(li);
-  }
+  const li = document.createElement("li");
+  li.textContent = `A pessoa sorteada foi: ${sorteado}`;
+  resultado.appendChild(li);
 }
 
 // Função para reiniciar o jogo
