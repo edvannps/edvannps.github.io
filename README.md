@@ -17,6 +17,7 @@ Este portfólio foi desenvolvido como parte do desafio Alpha EdTech e serve como
 
 - 🎨 Design moderno e responsivo
 - 🌓 Navbar com efeito de transparência ao scroll
+- 🍔 Menu hambúrguer para dispositivos móveis
 - ⚡ Animações e transições suaves
 - 📱 Totalmente responsivo (mobile-first)
 - 🎯 Foco em UX/UI e acessibilidade
@@ -111,11 +112,18 @@ O design utiliza uma paleta de cores profissional e moderna:
 ### ⚡ Recursos Técnicos
 
 - ✅ Navbar fixa com scroll transparente
+- ✅ Menu hambúrguer responsivo (< 768px)
+  - Animação de hambúrguer para X
+  - Menu lateral deslizante
+  - Overlay escuro de fundo
+  - Fecha automaticamente ao clicar em links
+  - Suporte a toque e clique
 - ✅ Smooth scroll para navegação interna
 - ✅ Animações CSS personalizadas
 - ✅ Cards de projetos com tamanhos uniformes
 - ✅ Imagens otimizadas com object-fit
 - ✅ Layout totalmente responsivo
+- ✅ Acessibilidade (ARIA labels e navigation)
 
 ---
 
@@ -182,6 +190,7 @@ git push origin main
 - [ ] Adicionar animações de scroll reveal
 - [ ] Integrar blog técnico
 - [ ] Adicionar testes de acessibilidade (WCAG)
+- [ ] Otimizar imagens com lazy loading
 
 ---
 
