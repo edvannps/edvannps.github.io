@@ -301,9 +301,30 @@ footer {
     text-align: center;
 }
 
+.socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 .socials a {
     color: var(--azul-claro);
     text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(51, 153, 204, 0.1);
+}
+
+.socials a:hover {
+    color: var(--branco);
+    background-color: var(--azul-claro);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(51, 153, 204, 0.4);
 }
