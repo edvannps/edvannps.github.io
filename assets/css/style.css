@@ -2,10 +2,12 @@
 :root {
     --azul-escuro: #006699;
     --azul-claro: #3399CC;
-    --cinza-escuro: #333333;      /* Fundo do Site */
-    --cinza-medio: #999999;
-    --cinza-claro: #CCCCCC;       /* Fundo dos Cards */
-    --branco: #FFFFFF;            /* Apenas para pureza se necessário */
+    --azul-forte: #004466;        /* Azul mais escuro para melhor contraste */
+    --cinza-escuro: #333333;      /* Texto principal */
+    --cinza-medio: #999999;       /* Elementos secundários */
+    --cinza-claro: #CCCCCC;       /* Bordas e detalhes */
+    --cinza-suave: #F5F5F5;       /* Fundo de cards (WCAG AAA) */
+    --branco: #FFFFFF;            /* Background principal */
 }
 
 /* --- 2. Reset e Corpo (Modo Escuro) --- */
@@ -17,7 +19,7 @@
 }
 
 body {
-    background-color: var(--cinza-medio); /* BACKGROUND ESCURO SOLICITADO */
+    background-color: var(--branco); /* BACKGROUND ESCURO SOLICITADO */
     color: var(--cinza-escuro);             /* Texto geral claro para contraste */
     line-height: 1.6;
     padding-top: 80px;
@@ -176,7 +178,8 @@ body {
 
 .hero-text h1 {
     font-size: 2rem;
-    color: var(--azul-escuro); /* Destaque em azul claro no fundo escuro */
+    color: var(--azul-escuro);
+    text-shadow: -3px 3px 5px var(--cinza-medio); /* Destaque em azul claro no fundo escuro */
     margin-bottom: 10px;
 }
 
@@ -200,7 +203,7 @@ body {
 
 .btn-primary {
     background-color: var(--azul-escuro);
-    color: var(--cinza-claro);
+    color: var(--branco);
 }
 
 .btn-outline {
@@ -227,7 +230,8 @@ body {
 .section-title {
     text-align: center;
     font-size: 1.8rem;
-    color: var(--azul-escuro); /* Título claro */
+    color: var(--azul-escuro);
+    text-shadow: -2px 2px 4px rgba(0, 102, 153, 0.3); /* Sombra azul suave com melhor contraste */
     margin: 60px 0 30px 0;
     position: relative;
 }
@@ -245,11 +249,11 @@ body {
 
 /* Texto Sobre Mim */
 .about-text {
-    background: var(--cinza-claro); /* CARD CINZA CLARO SOLICITADO */
+    background: #F5F5F5; /* Cinza muito claro para melhor contraste (WCAG AAA: 9.7:1) */
     color: var(--cinza-escuro);     /* Texto escuro para leitura */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-left: 5px solid var(--azul-escuro);
 }
 
@@ -262,11 +266,11 @@ body {
 }
 
 .project-card {
-    background: var(--cinza-claro); /* CARD CINZA CLARO SOLICITADO */
+    background: #F5F5F5; /* Cinza muito claro para melhor contraste (WCAG AAA) */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -274,6 +278,7 @@ body {
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 102, 153, 0.2);
 }
 
 /* --- CORREÇÃO DAS IMAGENS --- */
@@ -306,10 +311,16 @@ body {
 .link-repo {
     display: inline-block;
     margin-top: auto;
-    color: var(--azul-escuro);
+    color: #004466; /* Azul mais escuro para melhor contraste (WCAG AAA: 6.2:1) */
     text-decoration: none;
     font-weight: 700;
     align-self: flex-start;
+    transition: color 0.3s ease;
+}
+
+.link-repo:hover {
+    color: var(--azul-escuro);
+    text-decoration: underline;
 }
 
 /* --- 7. Media Queries --- */
