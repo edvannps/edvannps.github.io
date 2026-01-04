@@ -17,6 +17,20 @@
 </head>
 <body>
 
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="code-brackets">
+                <span class="bracket">&lt;</span>
+                <span class="dev-text">DEV</span>
+                <span class="bracket">/&gt;</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <header id="main-header">
         <nav class="container">
             <div class="logo">
@@ -43,16 +57,16 @@
         <section id="hero">
             <div class="container hero-content">
                 <div class="hero-text">
-                    <h1>Olá, sou Edvan Sabino.</h1>
+                    <h1 data-text="Olá, sou Edvan Sabino.">Olá, sou <span class="highlight">Edvan Sabino</span>.</h1>
                     <h2>Construindo o futuro com solidez e código.</h2>
                     <p>Desenvolvedor FullStack unindo a inovação da Inteligência Artificial com o Desenvolvimento de Softwares.</p>
                     <div class="hero-btns">
-                        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-                        <a href="https://www.linkedin.com/in/edvan-sabino/" target="_blank" class="btn btn-outline">LinkedIn</a>
+                        <a href="#projetos" class="btn btn-primary" aria-label="Ver meus projetos">Ver Projetos</a>
+                        <a href="https://www.linkedin.com/in/edvan-sabino/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Acessar meu LinkedIn">LinkedIn</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="./assets/img/foto2_03_2024.jpg" alt="Foto de Edvan Sabino">
+                    <img src="./assets/img/foto2_03_2024.jpg" alt="Foto profissional de Edvan Sabino, desenvolvedor fullstack" loading="eager">
                 </div>
             </div>
         </section>
